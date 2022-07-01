@@ -4,8 +4,15 @@ import Contact from "./components/Contact";
 import Login from "./components/Login";
 import NotFound from "./components/NotFound";
 import Register from "./components/Register";
+import useStore from "./Store/ClientStore";
+import UserHomePage from "./components/User/userHomePage";
+import AccountSettings from "./components/User/AccountSettings";
 
 function App() {
+
+  const user = useStore((state) => state.user);
+
+
 
   return (
     <Router>
@@ -14,6 +21,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        {user.type === "user" && <Route path="/user" element={<UserHomePage />} />}
+        {user.type === "user" && <Route path="/user/account" element={<AccountSettings />} />}
         <Route path="*" element={<NotFound />} />
 
       </Routes>

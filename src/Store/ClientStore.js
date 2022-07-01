@@ -7,7 +7,17 @@ let store = (set) => ({
     dark : false,
     toogleDarkMode : () => set((state) => ({
         dark : !state.dark
-    }))
+    })),
+
+
+    user : {},
+    setUser : (user) => set((state) => ({
+        user : user
+    })),
+
+    logout : () => set((state) => ({
+        user : {}
+    })),
         
 
 });
