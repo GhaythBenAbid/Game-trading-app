@@ -33,8 +33,14 @@ function AccountSettings() {
             last_name : last_name,
             email : email,
             id : selectedUser.data.id,
-        });
-        GetUser(user.id);
+        } , {
+            onSuccess : () => {
+                selectedUser.refetch();
+            }
+        })
+        
+
+
         
         
     }
