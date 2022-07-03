@@ -7,6 +7,7 @@ import Register from "./components/Register";
 import useStore from "./Store/ClientStore";
 import UserHomePage from "./components/User/userHomePage";
 import AccountSettings from "./components/User/AccountSettings";
+import Accounts from "./components/User/Accounts";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         {user.type === "user" && <Route path="/user" element={<UserHomePage />} />}
         {user.type === "user" && <Route path="/user/account" element={<AccountSettings />} />}
+        {user.type === "user" && <Route path="/user/accounts" element={<Accounts />} />}
         <Route path="*" element={<NotFound />} />
 
       </Routes>

@@ -11,9 +11,16 @@ function Login() {
 
     const [background, setBackground] = useState();
     const setUser = useStore((state) => state.setUser);
+    const user = useStore((state) => state.user);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if(user.type){
+            navigate("/"+user.type)
+        }
+    } , []);
 
 
     useEffect(() => {

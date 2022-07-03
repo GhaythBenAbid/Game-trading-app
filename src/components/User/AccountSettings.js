@@ -51,7 +51,6 @@ function AccountSettings() {
 
             <section class="w-full p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
                 <h2 class="text-lg font-semibold text-gray-700 capitalize dark:text-white mb-5">Account settings</h2>
-            {JSON.stringify(selectedUser.data)}
 
                 <div className='grid grid-cols-2'>
                     <div>
