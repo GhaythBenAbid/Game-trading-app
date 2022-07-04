@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {ReactComponent as League_of_legends} from '../icons/leagueoflegends.svg'
 import {ReactComponent as Valorant} from '../icons/valorant.svg'
-import {ReactComponent as Fifa22} from '../icons/fifa22.svg'
+import {ReactComponent as Fifa} from '../icons/fifa22.svg'
 import {ReactComponent as Fortnite} from '../icons/fortnite.svg'
 import {ReactComponent as FreeFire} from '../icons/freefire.svg'
 import {ReactComponent as RainbowSixSiege} from '../icons/rainboxsixsiege.svg'
@@ -132,7 +132,7 @@ function HomePage() {
                         <Valorant />
                     </a>
                     <a href="#" class="flex justify-center items-center h-80">
-                       <Fifa22 /> 
+                       <Fifa /> 
                     </a>
 
                     <a href="#" class="flex justify-center items-center h-80">
