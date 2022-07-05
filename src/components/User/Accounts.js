@@ -57,16 +57,20 @@ function Accounts() {
 
                 <div className='grid grid-cols-2'>
                     <div>
-                        <label for="First Name" class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">First Name</label>
-                        <input  type="text" placeholder="First Name" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <label  class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Email</label>
+                        <input  type="text" placeholder="Email" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
                     <div>
-                        <label for="Last Name" class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Last Name</label>
-                        <input  type="text" placeholder="Last Name" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <label  class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Password</label>
+                        <input  type="text" placeholder="Password" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
                     <div>
-                        <label for="Email" class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Email</label>
-                        <input  type="email" placeholder="Email" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <label  class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Price</label>
+                        <input  type="email" placeholder="Price" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    </div>
+                    <div>
+                        <label  class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Description</label>
+                        <input  type="text" placeholder="Description" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                     </div>
                     
                     

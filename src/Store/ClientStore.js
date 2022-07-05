@@ -15,9 +15,14 @@ let store = (set) => ({
         user : user
     })),
 
-    logout : () => set((state) => ({
-        user : {}
-    })),
+    logout : () => {
+        set((state) => ({
+            user : {}
+        }));
+        window.location.href = "/login";
+
+
+    }
         
 
 });
