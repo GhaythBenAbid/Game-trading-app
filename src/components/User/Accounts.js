@@ -56,32 +56,32 @@ function Accounts() {
 
 
     return (
-        <div className="flex">
+        <div className="flex dark:bg-gray-900">
             <SideBar />
             <div class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8">
-                <h1 className={`font-bold text-3xl ${selectedgame != 0 ? 'text-primary' : ''}`}>Choose a game</h1>
+                <h1 className={`dark:text-white font-bold text-3xl ${selectedgame != 0 ? 'text-primary' : ''}`}>Choose a game</h1>
                 <hr />
                 <div>
 
                     <div class=" grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
                         <a href="#" class="flex justify-center items-center h-80">
-                            <League_of_legends className={`hover:fill-primary ${selectedgame == 1 ? 'fill-primary' : ''}`} onClick={() => { handleSelectGame(1) }} />
+                            <League_of_legends className={`dark:fill-white dark:hover:fill-primary hover:fill-primary ${selectedgame == 1 ? 'fill-primary' : ''}`} onClick={() => { handleSelectGame(1) }} />
                         </a>
                         <a href="#" class="flex justify-center items-center h-80">
-                            <Valorant className={`hover:fill-primary ${selectedgame == 2 ? 'fill-primary' : ''}`} onClick={() => { handleSelectGame(2) }} />
+                            <Valorant className={`dark:fill-white dark:hover:fill-primary hover:fill-primary ${selectedgame == 2 ? 'fill-primary' : ''}`} onClick={() => { handleSelectGame(2) }} />
                         </a>
                         <a href="#" class="flex justify-center items-center h-80">
-                            <Fifa className={`hover:fill-primary ${selectedgame == 3 ? 'fill-primary' : ''}`} onClick={() => { handleSelectGame(3) }} />
+                            <Fifa className={`dark:fill-white dark:hover:fill-primary hover:fill-primary ${selectedgame == 3 ? 'fill-primary' : ''}`} onClick={() => { handleSelectGame(3) }} />
                         </a>
                         <a href="#" class="flex justify-center items-center h-80">
-                            <Fortnite className={`hover:fill-primary ${selectedgame == 4 ? 'fill-primary' : ''}`} onClick={() => { handleSelectGame(4) }} />
+                            <Fortnite className={`dark:fill-white dark:hover:fill-primary hover:fill-primary ${selectedgame == 4 ? 'fill-primary' : ''}`} onClick={() => { handleSelectGame(4) }} />
                         </a>
                         <a href="#" class="flex justify-center items-center h-80">
-                            <FreeFire className={`hover:fill-primary ${selectedgame == 5 ? 'fill-primary' : ''}`} onClick={() => { handleSelectGame(5) }} />
+                            <FreeFire className={`dark:fill-white dark:hover:fill-primary hover:fill-primary ${selectedgame == 5 ? 'fill-primary' : ''}`} onClick={() => { handleSelectGame(5) }} />
 
                         </a>
                         <a href="#" class="flex justify-center items-center h-80">
-                            <RainbowSixSiege className={`hover:fill-primary ${selectedgame == 6 ? 'fill-primary' : ''}`} onClick={() => { handleSelectGame(6) }} />
+                            <RainbowSixSiege className={`dark:fill-white dark:hover:fill-primary hover:fill-primary ${selectedgame == 6 ? 'fill-primary' : ''}`} onClick={() => { handleSelectGame(6) }} />
                         </a>
                     </div>
                 </div>
@@ -99,7 +99,7 @@ function Accounts() {
                         </div>
                         }
                         <section class="w-full p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
-                            <h2 class="text-lg font-semibold text-gray-700 capitalize dark:text-white mb-5">Account settings</h2>
+                            <h2 class="text-lg font-semibold text-gray-700 capitalize dark:text-white mb-5">Account Information</h2>
 
                             <div className='grid grid-cols-2'>
                                 <div>
@@ -108,7 +108,7 @@ function Accounts() {
                                 </div>
                                 <div>
                                     <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Password</label>
-                                    <input onChange={(e) => { setPassword(e.target.value) ; setSuccessSubmittion(false) }} type="text" placeholder="Password" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                    <input  onChange={(e) => { setPassword(e.target.value) ; setSuccessSubmittion(false) }} type="password" placeholder="Password" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                                 </div>
                                 <div>
                                     <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Price</label>

@@ -8,6 +8,7 @@ import useStore from "./Store/ClientStore";
 import UserHomePage from "./components/User/userHomePage";
 import AccountSettings from "./components/User/AccountSettings";
 import Accounts from "./components/User/Accounts";
+import ListAccounts from "./components/User/ListAccounts";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         {user.type === "user" && <Route path="/user" element={<UserHomePage />} />}
         {user.type === "user" && <Route path="/user/account" element={<AccountSettings />} />}
         {user.type === "user" && <Route path="/user/accounts" element={<Accounts />} />}
+        {user.type === "user" && <Route path="/user/list/accounts" element={<ListAccounts />} />}
         <Route path="*" element={<NotFound />} />
 
       </Routes>
