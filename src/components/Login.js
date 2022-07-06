@@ -30,7 +30,7 @@ function Login() {
 
 
 
-    const { mutateAsync: loginUser, data } = LoginUser();
+    const { mutateAsync: loginUser } = LoginUser();
     
 
 
