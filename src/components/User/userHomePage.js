@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useStore from "../../Store/ClientStore";
 import SideBar from "../SideBar/sidebar";
 
@@ -21,7 +22,7 @@ function UserHomePage() {
                             <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 lg:text-base">You can submit and suggest the value of this account. Our agents will verify and validate this account</p>
 
                             <div class="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row">
-                                <a href="#" class="block px-3 py-2 text-sm font-semibold text-center text-white transition-colors duration-200 transform bg-primary rounded-md hover:bg-primary">View More</a>
+                                <Link to="/user/accounts"><a href="#" class="block px-3 py-2 text-sm font-semibold text-center text-white transition-colors duration-200 transform bg-primary rounded-md hover:bg-primary">Open</a></Link>
                             </div>
                         </div>
                     </div>
@@ -45,7 +46,7 @@ function UserHomePage() {
                             <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 lg:text-base">When your account get verified by our agents , you can find here all the validated and no validated accounts here</p>
 
                             <div class="flex flex-col mt-6 space-y-3 lg:space-y-0 lg:flex-row">
-                                <a href="#" class="block px-3 py-2 text-sm font-semibold text-center text-white transition-colors duration-200 transform bg-primary rounded-md hover:bg-primary">View More</a>
+                                <Link to="/user/list/accounts"><a href="#" class="block px-3 py-2 text-sm font-semibold text-center text-white transition-colors duration-200 transform bg-primary rounded-md hover:bg-primary">View More</a></Link>
                             </div>
                         </div>
                     </div>
