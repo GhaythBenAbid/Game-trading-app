@@ -22,7 +22,7 @@ function Accounts() {
     const user = useStore((state) => state.user);
 
     const { mutate: createAccount } = CreateAccount();
-
+    
 
     function handleSelectGame(id) {
         setSelectedGame(id);
@@ -56,7 +56,7 @@ function Accounts() {
 
 
     return (
-        <div className="flex dark:bg-gray-900">
+        <div className="flex dark:bg-gray-900 ">
             <SideBar />
             <div class="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-8">
                 <h1 className={`dark:text-white font-bold text-3xl ${selectedgame != 0 ? 'text-primary' : ''}`}>Choose a game</h1>
@@ -110,13 +110,13 @@ function Accounts() {
                                     <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Password</label>
                                     <input  onChange={(e) => { setPassword(e.target.value) ; setSuccessSubmittion(false) }} type="password" placeholder="Password" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                                 </div>
-                                <div>
+                                <div className="col-span-2">
                                     <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Price</label>
-                                    <input onChange={(e) => { setPrice(e.target.value) ; setSuccessSubmittion(false) }} type="text" placeholder="Price" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                    <input onChange={(e) => { setPrice(e.target.value) ; setSuccessSubmittion(false) }} type="text" placeholder="Price" class="block w-[95.8%] mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                                 </div>
-                                <div>
+                                <div className="col-span-2">
                                     <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Description</label>
-                                    <input onChange={(e) => { setDescription(e.target.value) ; setSuccessSubmittion(false) }} type="text" placeholder="Description" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                    <textarea onChange={(e) => { setDescription(e.target.value) ; setSuccessSubmittion(false) }} type="text" placeholder="Description" class="block w-[95.8%] mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"></textarea>
                                 </div>
 
 
