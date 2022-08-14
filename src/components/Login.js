@@ -53,15 +53,6 @@ function Login() {
 
     }
 
-
-
-
-
-
-
-
-
-
     return (
         <div>
             <div className="bg-white dark:bg-gray-900">

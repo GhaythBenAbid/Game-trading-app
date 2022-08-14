@@ -21,7 +21,7 @@ function SideBar() {
 
     return (
 
-        <div class="flex flex-col w-80 h-screen px-4 py-8 bg-white border-r dark:bg-gray-800 dark:border-gray-600">
+        <div class="w-80 sticky left-0 top-0 h-screen flex flex-col px-4 py-8 bg-white border-r dark:bg-gray-800 dark:border-gray-600">
             <h2 class="text-3xl font-semibold text-gray-800 dark:text-white">Brand</h2>
 
             <div class="relative mt-6">

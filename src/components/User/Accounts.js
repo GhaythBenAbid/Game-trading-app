@@ -5,6 +5,7 @@ import { ReactComponent as Fifa } from '../../icons/fifa22.svg'
 import { ReactComponent as Fortnite } from '../../icons/fortnite.svg'
 import { ReactComponent as FreeFire } from '../../icons/freefire.svg'
 import { ReactComponent as RainbowSixSiege } from '../../icons/rainboxsixsiege.svg'
+import { ReactComponent as Manette } from '../../assets/manette.svg'
 import { useEffect, useState } from "react";
 import useStore from "../../Store/ClientStore";
 import { CreateAccount } from "../../Store/useAccount";
@@ -13,7 +14,7 @@ import { LoginUser } from "../../Store/useAuth";
 function Accounts() {
 
     const [selectedgame, setSelectedGame] = useState(0);
-    const [successSubmittion , setSuccessSubmittion] = useState(false);
+    const [successSubmittion, setSuccessSubmittion] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [price, setPrice] = useState('');
@@ -22,7 +23,7 @@ function Accounts() {
     const user = useStore((state) => state.user);
 
     const { mutate: createAccount } = CreateAccount();
-    
+
 
     function handleSelectGame(id) {
         setSelectedGame(id);
@@ -87,16 +88,16 @@ function Accounts() {
                 </div>
                 <hr />
 
-                {selectedgame != 0 &&
+                {selectedgame != 0 ?
                     <div>
                         {successSubmittion &&
-                        <div className="w-full bg-green-700 py-2 rounded-lg my-2">
-                            <div className="w-11/12 mx-auto flex items-center">
-                                
-                                <h1 className="text-white font-bold">Game Submitted Successfully</h1>
+                            <div className="w-full bg-green-700 py-2 rounded-lg my-2">
+                                <div className="w-11/12 mx-auto flex items-center">
 
+                                    <h1 className="text-white font-bold">Game Submitted Successfully</h1>
+
+                                </div>
                             </div>
-                        </div>
                         }
                         <section class="w-full p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
                             <h2 class="text-lg font-semibold text-gray-700 capitalize dark:text-white mb-5">Account Information</h2>
@@ -104,20 +105,33 @@ function Accounts() {
                             <div className='grid grid-cols-2'>
                                 <div>
                                     <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Email</label>
-                                    <input onChange={(e) => { setEmail(e.target.value) ; setSuccessSubmittion(false)  }} type="text" placeholder="Email" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                    <input onChange={(e) => { setEmail(e.target.value); setSuccessSubmittion(false) }} type="text" placeholder="Email" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                                 </div>
                                 <div>
                                     <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Password</label>
-                                    <input  onChange={(e) => { setPassword(e.target.value) ; setSuccessSubmittion(false) }} type="password" placeholder="Password" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                    <input onChange={(e) => { setPassword(e.target.value); setSuccessSubmittion(false) }} type="password" placeholder="Password" class="block w-11/12 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                                 </div>
                                 <div className="col-span-2">
                                     <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Price</label>
-                                    <input onChange={(e) => { setPrice(e.target.value) ; setSuccessSubmittion(false) }} type="text" placeholder="Price" class="block w-[95.8%] mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                    <input onChange={(e) => { setPrice(e.target.value); setSuccessSubmittion(false) }} type="text" placeholder="Price" class="block w-[95.8%] mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                                 </div>
-                                <div className="col-span-2">
-                                    <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Description</label>
-                                    <textarea onChange={(e) => { setDescription(e.target.value) ; setSuccessSubmittion(false) }} type="text" placeholder="Description" class="block w-[95.8%] mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"></textarea>
-                                </div>
+                                {selectedgame == 1 ?
+                                    <div className="col-span-2">
+                                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Description</label>
+                                        <textarea onChange={(e) => { setDescription(e.target.value); setSuccessSubmittion(false) }} type="text" placeholder="Description" class="block w-[95.8%] h-40 mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" value="Number Of Champs :&#13;&#10;Number of Skins :&#13;&#10;Level :&#13;&#10;Elo :&#13;&#10;"></textarea>
+                                    </div>
+                                    
+                                    :
+
+                                    <div className="col-span-2">
+                                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Description</label>
+                                        <textarea onChange={(e) => { setDescription(e.target.value); setSuccessSubmittion(false) }} type="text" placeholder="Description" class="block w-[95.8%] mb-2 px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" value=""></textarea>
+                                    </div>
+
+                                }
+
+
+
 
 
                             </div>
@@ -126,6 +140,10 @@ function Accounts() {
                                 <button onClick={() => { handleSubmit() }} class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Save</button>
                             </div>
                         </section>
+                    </div>
+                    :
+                    <div>
+                        <Manette className="w-full h-80 mt-2" />
                     </div>
                 }
             </div>
